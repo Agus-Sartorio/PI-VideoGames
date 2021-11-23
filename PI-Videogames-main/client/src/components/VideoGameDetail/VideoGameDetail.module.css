@@ -1,0 +1,28 @@
+.todo{
+    background: blue;
+    display: flex;
+    flex-direction:column;
+}
+
+.img{
+    height:400px;
+    width: 700px;
+}
+
+.text{
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 0px;
+    text-align: justify;
+}
+
+/* .btn{
+    margin-bottom: 50px;
+
+} */
+
+.button{
+    margin-bottom:50px;
+    margin-top: 10px;
+}
+

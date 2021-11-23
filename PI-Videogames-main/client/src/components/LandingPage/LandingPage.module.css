@@ -1,0 +1,79 @@
+.titulo{
+    font-size: 45px;
+    font-display:initial;
+    position: relative;
+    z-index: 2;
+    font-style: italic;
+    color: black;
+}
+
+.p1{
+    position: relative;
+    z-index: 2;
+    font-family: Verdana;
+    color: black;
+    font-size: 19px;
+}
+
+.p2{
+    position: relative;
+    z-index: 2;
+    font-family: Verdana;
+    color: black;
+    font-size: 15px;
+}
+
+/* .p3{
+    position: relative;
+    z-index: 2;
+} */
+
+.boton{
+    position: relative;
+    z-index: 2;
+    background-color: rgb(255, 255, 255);
+    border-width: 0px;
+    color: rgb(48, 48, 48);
+    border-radius: 4.5px; 
+    height: 30px;
+    font-weight: 300;
+    font-weight: bold;
+    width: 90px;
+    
+}
+
+.boton:hover{
+    position: relative;
+    z-index: 2;
+    background-color:rgb(97, 96, 96);
+    color: rgb(255, 255, 255);
+    border-radius: 4.5px; 
+    height: 30px;
+    border-color: rgb(48, 48, 48);
+    cursor: pointer;
+    font-style: italic;
+    font-weight: 500;
+    border-width: 1.5px;
+    font-weight: bold;
+    width: 90px;
+}
+
+video{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    object-fit:cover;
+}
+
+.capa{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1c1c1d;
+    opacity: 0.5;
+    mix-blend-mode: overlay;
+}

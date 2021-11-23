@@ -1,0 +1,109 @@
+.contenedor{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background: #ADA996;
+    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    margin-left: 60px;
+    margin-right: 60px;
+    border-radius:8px;
+    margin-bottom: 150px;
+    align-items: stretch;
+}
+
+.algo{
+    text-decoration: none;
+    color: black;
+}
+
+.todo{
+    background-image: url(../../fondos/pexels-cottonbro-4835429.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column
+}
+
+.cards{
+    border-width: 1.5px;
+    border-color: black;
+    font-family: "arial", serif;
+}
+
+.cards:hover{
+    border-width: 1.5px;
+    border-color: white;
+    font-family: "arial", serif;
+    cursor: pointer;
+}
+
+/* .h1{
+    color: white;
+    display: flex;
+    margin-left: 60px;
+} */
+
+.filtros{
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.ord1{
+    margin-right: 5px;
+    border-radius: 3px;
+}
+.ord2{
+    margin-right: 5px;
+    border-radius: 3px;
+}
+.ord3{
+    margin-right: 5px;
+    border-radius: 3px;
+}
+.ord4{
+    margin-right: 5px;
+    border-radius: 3px;
+}
+
+.link{
+    margin-top: 15px;
+}
+
+.recargar{
+    background: none;
+    text-decoration: none;
+    display: flex;
+    /* width: 115px; */
+    margin-left: 60px;
+    color: white;
+    border-style: none;
+    font-size: 30px;
+    margin-top:15px;
+    margin-bottom:15px;
+    font-weight: bold;
+    font-family: Verdana;
+}
+
+.recargar:hover{
+    background: none;
+    text-decoration: none;
+    display: flex;
+    /* width: 115px; */
+    margin-left: 60px;
+    color: white;
+    border-style: none;
+    font-size: 30px;
+    margin-top:15px;
+    margin-bottom:15px;
+    font-weight: bold;
+    font-family: Verdana;
+    cursor: pointer;
+}
+
+/* .searchBar{
+
+} */
