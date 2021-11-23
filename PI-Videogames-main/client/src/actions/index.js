@@ -24,7 +24,7 @@ export function getNameVideogame(name) {
             } catch(error){
                 return dispatch({
                     type:"GET_NAME_VIDEOGAME",
-                    payload:[]
+                    payload:[] // esto es para cuando le paso el action.payload en el reducer.
                 })
         }
     }

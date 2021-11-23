@@ -22,7 +22,7 @@ export default function VideoGameDetail(props) {
                 myVideogame ?
                 <div className={styles.cont}>
                     <h1>{myVideogame.name}</h1>
-                    <img className={styles.img} src={myVideogame.urlImg ? myVideogame.urlImg : myVideogame.image } alt="Imagen no encontrada" width="500px" height="700px" />
+                    <img className={styles.img} src={myVideogame.urlImg ? myVideogame.urlImg : myVideogame.image } alt={myVideogame.name} width="500px" height="700px" />
                     <h4>Generos: {myVideogame.genres + " "}</h4>
                     <p>Rating: {myVideogame.rating}</p>
                     <p>Plataformas: {myVideogame.platforms + " "}</p>

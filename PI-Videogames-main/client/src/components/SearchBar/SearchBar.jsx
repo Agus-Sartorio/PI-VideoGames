@@ -28,7 +28,7 @@ export default function SearchBar() {
             onChange={(e) => handleInputChange(e)}
             value={name}
             />
-            <button type="submit" className={styles.btn}><i class="fas fa-search"></i></button>
+            <button type="submit" className={styles.btn}><i className="fas fa-search"></i></button>
         </form>
     )
 }

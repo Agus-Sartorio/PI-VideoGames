@@ -25,7 +25,8 @@
     background-size: cover;
     padding-bottom: 60px;
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .cards{
@@ -104,6 +105,24 @@
     cursor: pointer;
 }
 
-/* .searchBar{
+.error{
+    background-image: url(../../fondos/pexels-cottonbro-4835429.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-bottom: 60px;
+    /* display: flex;
+    flex-direction: column; */
+}
 
-} */
+.imgError{
+    display: flex;
+    /* margin-left: 600px; */
+    height:350px;
+    width:350px;
+    margin-left: 590px;
+}
+
+.h2error{
+    color:white;
+}
