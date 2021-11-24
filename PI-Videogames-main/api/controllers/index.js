@@ -1,7 +1,7 @@
 const axios = require('axios');
-const { Genre } = require('../src/models/Genre');
+;
 /* const { Videogame } = require('../src/models/Videogame'); */
-const { Videogame } = require("../src/db")
+const { Videogame, Genre } = require("../src/db")
 
 
 const getApiInfo = async () => {
@@ -46,9 +46,6 @@ const getDbInfo = async () => {
        include: {
            model: Genre,
            attributes: ["name"],
-           through: {
-               attributes: [],
-           },
        }
    })
 }

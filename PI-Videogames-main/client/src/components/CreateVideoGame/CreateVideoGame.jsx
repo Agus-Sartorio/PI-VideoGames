@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 /* import { useHistory } from 'react-router-dom'; */
 import { getGenres, postVideogame } from '../../actions/index';
 import { useDispatch, useSelector } from 'react-redux';
+import styles from './CreateVideoGame.module.css'
 
 function validate(input) {
     let errors = {};
@@ -10,13 +11,13 @@ function validate(input) {
         errors.name = "Se requiere un nombre";
     } else if(!input.description){
         errors.description = "Se requiere una descripción";
-    } else if(!input.releaseDate){
-        errors.releaseDate = "Se requiere una fecha de lanzamiento";
+    } else if(!input.released){
+        errors.released = "Se requiere una fecha de lanzamiento";
     } else if(input.rating < 0 || input.rating > 5){
         errors.rating = "Se requiere una calificación entre 0 y 5";
-    } else if(!input.genre){
-        errors.genre = "Se requiere al menos un género";
-    } if(!input.platforms){
+    } /* else if(input.genres.length === 0){
+        errors.genre = "Se requiere al menos un género"; */
+     if(!input.platforms.length){
         errors.platforms = "Se requiere al menos una plataforma";
     }
     return errors;
@@ -31,7 +32,7 @@ export default function CreateVideoGame() {
     const [input, setInput] = useState({
         name: "",
         description: "",
-        releaseDate: "",
+        released: "",
         rating: "",
         platforms: [],
         genres: [],
@@ -69,7 +70,7 @@ export default function CreateVideoGame() {
         setInput({
             name: "",
             description: "",
-            releaseDate: "",
+            released: "",
             rating: "",
             platforms: [],
             genres: [],
@@ -82,12 +83,13 @@ export default function CreateVideoGame() {
     }, []);
 
     return (
-        <div>
+        <div className={styles.cont}>
+            <div className={styles.all}>
             <Link to="/home"><button>Volver</button></Link>
-            <h1>Creá tu videojuego!</h1>
-            <form onSubmit={(e) => handleSubmit(e)}>
-                <div>
-                    <label>Nombre:</label>
+            <h1 className={styles.tittle}>Creá tu videojuego!</h1>
+            <form className={styles.form} onSubmit={(e) => handleSubmit(e)}>
+                <div className={styles.label1}>
+                    <label className={styles.label1}>Nombre:</label>
                     <input
                     type="text"
                     value={input.name}
@@ -114,12 +116,12 @@ export default function CreateVideoGame() {
                     <label>Fecha de lanzamiento:</label>
                     <input
                     type="text"
-                    value={input.releaseDate}
-                    name="releaseDate"
+                    value={input.released}
+                    name="released"
                     onChange={(e) => handleChange(e)}
                     />   
-                    {errors.releaseDate && (
-                        <p>{errors.releaseDate}</p>
+                    {errors.released && (
+                        <p>{errors.released}</p>
                     )}
                 </div>
                 <div>
@@ -152,11 +154,13 @@ export default function CreateVideoGame() {
                     return <option value={gen.id}>{gen.name}</option>
                     })}   
                 </select>
-                <ul><li>{input.genres.map(el => el.name + " ,")}</li></ul>
-                <button type="submit">Crear videojuego</button>
-
+                <ul><p>{input.genres.map(el => el.name + ", ")}</p></ul>
+                <div>
+                <button type="submit" disabled={Object.keys(errors).length > 0 || input.genres.length === 0 || input.name === "" }>Crear videojuego</button>
+                </div>
                 </div>
             </form>
+            </div>
         </div>
     )
 }

@@ -10,21 +10,19 @@ const router = Router();
 
 
 router.post("/", async (req, res) => {
-    let { name, description, releaseDate, rating, genres, platforms, } = req.body;
+    let { name, description, released, rating, genres, platforms } = req.body;
     let genresIds = genres.map((g) => g.id); //?????
     try {
-        console.log("uno")
         const videogame = await Videogame.create({
         /* id: v4(), */
         name,
         description,
-        releaseDate,
+        released,
         rating,
         platforms,
         image: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Youtube_loading_symbol_1_(wobbly).gif'
       });
-      videogame.setGenres(genresIds);
-      console.log("dos");
+      videogame.setGenres(genresIds); 
       return res.json(videogame);
     } catch (e) {
       return res.status(400).send(e);
@@ -39,36 +37,20 @@ router.get('/:id', async(req, res) => {
             include: [
               {
                 model: Genre,
-                attributes: ["name"],//???????
-                through: {
-                  attributes: [],
-                },
+                attributes: ["name"],
               },
             ],
           });
-          generos = videogame.genres.map((e) => { //???????????
-            return e.name;
-          });
-          let videogameNew = {
-            name: videogame.name,
-            description: videogame.description,
-            rating: videogame.rating,
-            genres: generos,
-            platforms: videogame.platforms,
-            image: videogame.image,
-            released: videogame.release_date,
-          };
-          res.json(videogameNew);
+          res.json(videogame);
         } catch (e) {
-          res.status(404).send("Error de la Base de Datos: ", e);
+          res.status(500).send("Error de la Base de Datos: ", e);
         }
       } else {
     try {
         //PARA DAR DETALLE DEL GAME POR API
-        let videogame = await axios.get(
+        let {data: videogame}  = await axios.get(
           `https://api.rawg.io/api/games/${id}?key=1e3889c41b0049f2b108f6054483daf4`
         );
-        videogame = videogame.data;
         let game = {
           id: videogame.id,
           urlImg: videogame.background_image,
@@ -81,7 +63,7 @@ router.get('/:id', async(req, res) => {
         };
         res.json(game);
       } catch (e) {
-        res.status(404).send("Error de la API: ", e);
+        res.status(500).send("Error de la API: ", e);
       }
     } 
     });

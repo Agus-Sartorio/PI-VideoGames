@@ -5,13 +5,10 @@ const { Genre } = require("../src/db")
 const getAllGenres = async () => {
     try {
        const apiUrl = await axios.get('https://api.rawg.io/api/genres?key=1e3889c41b0049f2b108f6054483daf4');
-       var apiGenres = [];
+       let apiGenres = [];
        for(var i = 0; i < apiUrl.data.results.length; i++){
-           var genres = apiUrl.data.results[i];
-           const genreObj = {
-               name: genres.name,
-               id: genres.id
-           }
+           let { name, id } = apiUrl.data.results[i];
+           const genreObj = {name, id}
                apiGenres.push(genreObj);
            }
          apiGenres.map(uniqueGenre => { //???????????????????

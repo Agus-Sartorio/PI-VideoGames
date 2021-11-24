@@ -11,10 +11,9 @@ import styles from "./Home.module.css";
 
 export default function Home() {
 
-    const dispatch = useDispatch(); // esto es como el mapStateToProps.
+    const dispatch = useDispatch(); // con el dispatch modifico el estado de la store, porque despacho acciones.
     const allVideogames = useSelector((state) => state.videogames); // con esto me traigo todo lo que esta en el estado de videogames del reducer
     const allVideogamesCopy = useSelector((state) => state.allVideogames);
-    /* const filteredGames = useSelector((state) => state.videogames); */
     const [currentPage, setCurrentPage] = useState(1);
     const [videogamesPerPage, setVideogamesPerPage] = useState(15);
     const [orden, setOrden] = useState()
@@ -26,7 +25,7 @@ export default function Home() {
         setCurrentPage(pageNumber);
     }
 
-    useEffect(() => { // con esto me traigo del estado los juegos cuando el componente se monta.
+    useEffect(() => { // para traer desde la store al componente
         dispatch(getVideogames()); // esto es lo mismo que que el mapDispatchToProps.
     },[dispatch]);
 
@@ -59,7 +58,6 @@ export default function Home() {
 
     return (
         <div className={styles.todo}>
-            {/* <h1 onClick={e => {handleClick(e);}} className={styles.h1}>GAMINGPEDIA</h1> */}
             <button onClick={e => {handleClick(e);}} className={styles.recargar}>
              GAMINGPEDIA
             </button>
