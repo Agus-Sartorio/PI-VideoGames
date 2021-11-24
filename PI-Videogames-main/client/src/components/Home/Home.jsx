@@ -69,7 +69,7 @@ export default function Home() {
             {
                     !allVideogames.length && allVideogamesCopy.length > 0 && 
                     <div className={styles.error}>
-                        <h2 className={styles.h2error}>No hay ningun juego con este nombre ¯\(o_o)/¯ </h2>
+                        <h2 className={styles.h2error}>No hay ningun juego para mostrar \ (o_o) / </h2>
                         <img src="https://media4.giphy.com/media/xf20D8HzvTQzu/giphy.gif" alt="" className={styles.imgError} />
                     </div>
                 }

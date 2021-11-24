@@ -8,7 +8,7 @@ export default function Card({ name, genres, image, id }) {
     console.log("image", image); */
     return(
         <div className={styles.contenedorr}>
-            <h2 className={styles.titulo}><Link to={`/home/videogame/${id}`}><span className={styles.link}></span>{name}</Link></h2>
+            <h2 className={styles.titulo}><Link to={`/home/videogame/${id}`} className={styles.link2}><span className={styles.link}></span>{name}</Link></h2>
             <h5 className={styles.generos}>{genres && genres.map((genre) => {
                 return(
                     <p key={genre.id}>{genre.name}</p>

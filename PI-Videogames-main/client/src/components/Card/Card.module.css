@@ -38,6 +38,7 @@
     font-weight: bold;
     font-family: Verdana;
     text-decoration: underline; 
+    color:black;
 }
 
 .link{
@@ -46,4 +47,9 @@
     bottom:0;
     left:0;
     right:0;
+}
+
+.link2{
+    text-decoration: none;
+    color:black;
 }

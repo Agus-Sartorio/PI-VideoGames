@@ -5,6 +5,10 @@ import Home from './components/Home/Home.jsx';
 import CreateVideoGame from './components/CreateVideoGame/CreateVideoGame.jsx';
 import VideoGameDetail from './components/VideoGameDetail/VideoGameDetail.jsx';
 
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+</style>
+
 function App() {
   return (
     <BrowserRouter>
