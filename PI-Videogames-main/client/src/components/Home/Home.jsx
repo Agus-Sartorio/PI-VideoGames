@@ -112,12 +112,6 @@ export default function Home() {
                 </select>
                 </div>
                 }
-                {/* {
-                    !allVideogames.length && allVideogamesCopy.length > 0 && 
-                    <div>
-                        <h2>No hay ningun juego con este nombre</h2>
-                    </div>
-                } */}
                 <div className={styles.contenedor}>
                 {
                     currentVideogames?.map((v) => {
@@ -125,16 +119,13 @@ export default function Home() {
                     })
                 }
                 { 
-                 allVideogames.length > 0 && <Paginado 
+                 allVideogames.length > 15 && <Paginado 
                 videogamesPerPage = {videogamesPerPage}
                 allVideogames = {allVideogames.length}
                 paginado = {paginado}
                 />
                 }    
-                </div>
-                
-            
-            
+                </div>  
         </div>
     )
 

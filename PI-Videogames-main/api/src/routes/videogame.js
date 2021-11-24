@@ -11,10 +11,10 @@ const router = Router();
 
 router.post("/", async (req, res) => {
     let { name, description, releaseDate, rating, genres, platforms, } = req.body;
-    let genresIds = genres.map((g) => g.id);
+    let genresIds = genres.map((g) => g.id); //?????
     try {
         console.log("uno")
-      const videogame = await Videogame.create({
+        const videogame = await Videogame.create({
         /* id: v4(), */
         name,
         description,
@@ -39,14 +39,14 @@ router.get('/:id', async(req, res) => {
             include: [
               {
                 model: Genre,
-                attributes: ["name"],
+                attributes: ["name"],//???????
                 through: {
                   attributes: [],
                 },
               },
             ],
           });
-          generos = videogame.genres.map((e) => {
+          generos = videogame.genres.map((e) => { //???????????
             return e.name;
           });
           let videogameNew = {
