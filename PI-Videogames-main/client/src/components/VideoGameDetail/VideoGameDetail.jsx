@@ -14,6 +14,7 @@ export default function VideoGameDetail(props) {
     }, [dispatch]);
 
     const myVideogame = useSelector((state) => state.detail);
+    console.log(myVideogame)
     return (
         <div className={styles.todo}>
             {
@@ -22,7 +23,7 @@ export default function VideoGameDetail(props) {
                     <h1 className={styles.h1}>{myVideogame.name}</h1>
                     <img className={styles.img} src={myVideogame.urlImg ? myVideogame.urlImg : myVideogame.image } alt={myVideogame.name} width="500px" height="700px" />
                     <h4 className={styles.h4}>Generos: </h4>
-                    {myVideogame.genres?.map((g) => <p>{g.name}</p>)}
+                    {myVideogame.genres?.map((g) => <h5>{g.name}</h5>)}
                     <p className={styles.rating}>Rating: {myVideogame.rating}</p>
                     <p className={styles.plataformas}>Plataformas: {myVideogame.platforms + " "}</p>
                     <p className={styles.lanzamiento}>Lanzamiento: {myVideogame.released}</p>

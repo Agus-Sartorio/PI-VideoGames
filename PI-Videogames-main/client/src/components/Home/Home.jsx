@@ -7,7 +7,6 @@ import Card from "../Card/Card"
 import Paginado from '../Paginado/Paginado';
 import SearchBar from '../SearchBar/SearchBar';
 import styles from "./Home.module.css";
-/* import pexels from "../../fondos/pexels" */
 
 export default function Home() {
 

@@ -13,7 +13,6 @@ export default function LandingPage() {
             <h1 className={styles.titulo}>Personal Project VideoGames</h1>
             <p className={styles.p1}>Videojuegos de todas las plataformas</p>
             <p className={styles.p2}>Creá tu propio juego!</p>
-            {/* <p className={styles.p3}>Y muchas cosas mas!</p> */}
             <Link to = "./home">
                 <button className={styles.boton}>Continuar</button>
             </Link>

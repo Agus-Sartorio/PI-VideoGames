@@ -11,10 +11,6 @@
 
 .all{
     margin-top:200px;
-    display:flex;
-    /* flex-direction:row; */
-    /* flex-wrap: wrap; */
-    /* justify-content: space-evenly; */
     background: #ADA996;
     background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
     background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
@@ -22,10 +18,37 @@
     margin-right: 60px;
     border-radius:8px;
     margin-bottom: 150px;
-    position: relative;
+    display: flex;
+    flex-direction: column
 }
 
-.tittle{
+/* .tittle{
     display: inline;
+} */
+
+.div{
+    display:flex;
+    height:5vh;
 }
 
+.form{
+    display:flex;
+    flex-direction:column;
+    margin-top:50px;
+    /* margin-right: 1200px; */
+    text-align: left;
+    margin-left: 20px;
+}
+
+.botton{
+    display:flex;
+    flex-direction:column;
+    margin-top: 15px;
+}
+
+.form label{
+    width:200px;
+    display: inline-block;
+    text-align: left;
+    margin-right:15px
+}

@@ -1,20 +1,15 @@
 const { Router } = require('express');
-/* const { getAllVideogames } = require('../../controllers')   */ 
 const { Videogame, Genre } = require("../db")   
 const axios = require('axios'); 
-/* const { v4 } = require('uuid'); */
-
-/* const router = Router(); */
 
 const router = Router();
 
 
 router.post("/", async (req, res) => {
     let { name, description, released, rating, genres, platforms } = req.body;
-    let genresIds = genres.map((g) => g.id); //?????
+    let genresIds = genres.map((g) => g.id);
     try {
         const videogame = await Videogame.create({
-        /* id: v4(), */
         name,
         description,
         released,
@@ -38,6 +33,9 @@ router.get('/:id', async(req, res) => {
               {
                 model: Genre,
                 attributes: ["name"],
+                /* through:{
+                  attributes:[]
+                } */
               },
             ],
           });
@@ -55,7 +53,7 @@ router.get('/:id', async(req, res) => {
           id: videogame.id,
           urlImg: videogame.background_image,
           name: videogame.name,
-          genres: videogame.genres.map((e) => e.name),
+          genres: videogame.genres.map((e) => ({name: e.name})),
           rating: videogame.rating,
           platforms: videogame.platforms.map((e) => e.platform.name),
           released: videogame.released,

@@ -46,6 +46,9 @@ const getDbInfo = async () => {
        include: {
            model: Genre,
            attributes: ["name"],
+           /* through: {
+               attributes:[],
+           } */
        }
    })
 }

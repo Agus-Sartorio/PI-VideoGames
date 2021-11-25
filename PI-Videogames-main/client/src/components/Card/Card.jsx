@@ -3,9 +3,6 @@ import styles from "./Card.module.css";
 import {Link} from "react-router-dom"
 
 export default function Card({ name, genres, image, id }) {
-    /* console.log("genres", genres);
-    console.log("name", name);
-    console.log("image", image); */
     return(
         <div className={styles.contenedorr}>
             <h2 className={styles.titulo}>

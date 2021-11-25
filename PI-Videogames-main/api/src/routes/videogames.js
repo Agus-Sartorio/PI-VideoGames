@@ -8,7 +8,7 @@ router.get("/", async (req, res) => {
     let videoGamesTotal = await getAllVideogames();
     if(name) {
         let gameName = videoGamesTotal.filter(game => game.name.toLowerCase().includes(name.toLowerCase()));
-        if(gameName.length > 15) gameName.length = 15
+        if(gameName.length > 15) gameName = gameName.slice(0, 15)
         gameName.length ?
         res.status(200).send(gameName) :
         res.status(404).send("Juego no encontrado");

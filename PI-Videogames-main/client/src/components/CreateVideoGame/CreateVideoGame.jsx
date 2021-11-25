@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-/* import { useHistory } from 'react-router-dom'; */
 import { getGenres, postVideogame } from '../../actions/index';
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './CreateVideoGame.module.css'
@@ -15,9 +14,7 @@ function validate(input) {
         errors.released = "Se requiere una fecha de lanzamiento";
     } else if(input.rating < 0 || input.rating > 5){
         errors.rating = "Se requiere una calificación entre 0 y 5";
-    } /* else if(input.genres.length === 0){
-        errors.genre = "Se requiere al menos un género"; */
-     if(!input.platforms.length){
+    } if(!input.platforms.length){
         errors.platforms = "Se requiere al menos una plataforma";
     }
     return errors;
@@ -75,7 +72,6 @@ export default function CreateVideoGame() {
             platforms: [],
             genres: [],
         })
-        /* history.push("/home"); */
     }
 
     useEffect(() => {
@@ -86,7 +82,9 @@ export default function CreateVideoGame() {
         <div className={styles.cont}>
             <div className={styles.all}>
             <Link to="/home"><button>Volver</button></Link>
+            <div className={styles.div}>
             <h1 className={styles.tittle}>Creá tu videojuego!</h1>
+            </div>
             <form className={styles.form} onSubmit={(e) => handleSubmit(e)}>
                 <div className={styles.label1}>
                     <label className={styles.label1}>Nombre:</label>
@@ -155,9 +153,11 @@ export default function CreateVideoGame() {
                     })}   
                 </select>
                 <ul><p>{input.genres.map(el => el.name + ", ")}</p></ul>
-                <div>
-                <button type="submit" disabled={Object.keys(errors).length > 0 || input.genres.length === 0 || input.name === "" }>Crear videojuego</button>
                 </div>
+                <div className={styles.botonn}>
+                <button className={styles.botonn} type="submit" disabled={
+                    Object.keys(errors).length > 0 || input.genres.length === 0 || input.name === "" }>Crear videojuego
+                </button>
                 </div>
             </form>
             </div>

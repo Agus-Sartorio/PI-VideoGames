@@ -17,14 +17,16 @@ function rootReducer(state = initialState, action) {
         case "FILTER_BY_GENRE":
             const allVideogames = state.allVideogames;
             console.log(allVideogames)
-            const statusFiltered = action.payload === "todos" ? allVideogames : allVideogames.filter(game => game.genres.find(genre => genre.name === action.payload))
+            const statusFiltered = action.payload === "todos" ? allVideogames : 
+            allVideogames.filter(game => game.genres.find(genre => genre.name === action.payload))
             return{
                 ...state,
                 videogames: statusFiltered
             }
         case "FILTER_CREATED":
             const allVideogames2 = state.allVideogames;
-            const createdFilter = action.payload === "created" ? allVideogames2.filter(el => el.createdInDb) : allVideogames2.filter(el => !el.createdInDb);
+            const createdFilter = action.payload === "created" ? allVideogames2.filter(el => el.createdInDb) : 
+            allVideogames2.filter(el => !el.createdInDb);
             return{
                 ...state,
                 videogames: action.payload === "All" ? state.allVideogames : createdFilter
