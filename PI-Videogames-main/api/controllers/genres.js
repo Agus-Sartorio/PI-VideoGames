@@ -11,7 +11,7 @@ const getAllGenres = async () => {
            const genreObj = {name, id}
                apiGenres.push(genreObj);
            }
-         apiGenres.map(uniqueGenre => { //???????????????????
+         apiGenres.map(uniqueGenre => { 
              Genre.findOrCreate({
                  where: {
                         name: uniqueGenre.name,

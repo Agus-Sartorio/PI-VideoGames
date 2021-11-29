@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { getDetail } from '../../actions';
 import { useEffect } from 'react';
+import mario from "../../fondos/mario.gif"
 import styles from "./VideoGameDetail.module.css"
 
 export default function VideoGameDetail(props) {
@@ -14,11 +15,18 @@ export default function VideoGameDetail(props) {
     }, [dispatch]);
 
     const myVideogame = useSelector((state) => state.detail);
+    const loader = useSelector((state) => state.loading);
     console.log(myVideogame)
     return (
         <div className={styles.todo}>
             {
-                myVideogame ?
+                loader &&
+                <div className={styles.padre}>
+                <img src={mario} alt="" className={styles.loader} />
+                </div>
+            }
+            {
+                !loader &&
                 <div className={styles.cont}>
                     <h1 className={styles.h1}>{myVideogame.name}</h1>
                     <img className={styles.img} src={myVideogame.urlImg ? myVideogame.urlImg : myVideogame.image } alt={myVideogame.name} width="500px" height="700px" />
@@ -28,8 +36,7 @@ export default function VideoGameDetail(props) {
                     <p className={styles.plataformas}>Plataformas: {myVideogame.platforms + " "}</p>
                     <p className={styles.lanzamiento}>Lanzamiento: {myVideogame.released}</p>
                     <p className={styles.text}>Descripción: {myVideogame.description}</p>
-                </div> : 
-                <h1>Juego no encontrado</h1>
+                </div> 
             }
             <div className={styles.button}>
             <Link to="/home" >

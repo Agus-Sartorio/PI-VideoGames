@@ -81,7 +81,15 @@ export function postVideogame(payload){
 export function getDetail(id) {
     return async function(dispatch){
         try{
+            dispatch({
+                type: "SET_LOADING",
+                payload: true
+            })
         var json = await axios.get('http://localhost:3001/videogame/' + id);
+        dispatch({
+            type: "SET_LOADING",
+            payload: false
+        })
         return dispatch({
             type: "GET_DETAIL",
             payload: json.data

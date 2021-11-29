@@ -74,14 +74,16 @@ export default function CreateVideoGame() {
         })
     }
 
+
+
     useEffect(() => {
         dispatch(getGenres());
     }, []);
 
     return (
         <div className={styles.cont}>
+            <Link to="/home" className={styles.return}><button className={styles.volver}>GAMINGPEDIA</button></Link>
             <div className={styles.all}>
-            <Link to="/home"><button>Volver</button></Link>
             <div className={styles.div}>
             <h1 className={styles.tittle}>Creá tu videojuego!</h1>
             </div>

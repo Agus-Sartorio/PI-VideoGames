@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import Card from "../Card/Card"
 import Paginado from '../Paginado/Paginado';
 import SearchBar from '../SearchBar/SearchBar';
+import mando2 from "../../fondos/mando2.png"
 import styles from "./Home.module.css";
 
 export default function Home() {
@@ -61,8 +62,14 @@ export default function Home() {
              GAMINGPEDIA
             </button>
             <SearchBar className={styles.searchBar}/>
-            
-            <Link to = "./videogame" className={styles.link}>Create videogame</Link>
+            {
+                !allVideogames.length && !allVideogamesCopy.length &&
+                <div className={styles.padre}>
+                <img src={mando2} alt="" className={styles.loader} />
+                </div>
+            }
+            {allVideogames.length > 0 && 
+            <Link to = "./videogame" className={styles.link}>Create videogame</Link>}
             {
                     !allVideogames.length && allVideogamesCopy.length > 0 && 
                     <div className={styles.error}>

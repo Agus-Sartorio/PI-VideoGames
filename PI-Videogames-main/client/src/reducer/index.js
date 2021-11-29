@@ -3,13 +3,15 @@ const initialState = {
     videogames : [],
     allVideogames: [],
     genres: [],
-    detail: {}
+    detail: {},
+    platforms: [],
+    loading: false
 }
 
 function rootReducer(state = initialState, action) {
     switch (action.type) {
         case 'GET_VIDEOGAMES':
-            return {
+            return {    
                 ...state,
                 videogames: action.payload,
                 allVideogames: action.payload
@@ -97,6 +99,11 @@ function rootReducer(state = initialState, action) {
                 return {
                     ...state,
                     detail: action.payload
+                }
+            case "SET_LOADING":
+                return {
+                    ...state,
+                    loading: action.payload
                 }
         default:    
             return state;

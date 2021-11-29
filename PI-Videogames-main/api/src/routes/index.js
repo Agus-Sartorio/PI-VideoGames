@@ -1,21 +1,9 @@
 const { Router } = require('express');
-// Importar todos los routers;
-// Ejemplo: const authRouter = require('./auth.js');
-/* const axios = require('axios');
-const getApi = require("../../controllers") */
 const videogames = require("./videogames")
 const videogame = require("./videogame")
 const genres = require("./genres")
 
 const router = Router();
-
-// Configurar los routers
-// Ejemplo: router.use('/auth', authRouter);
-
-/* router.get("/", async (req, res) => {
-    var caca = await getApiInfo();
-    res.json(caca);
-}) */
 
 router.use("/videogames", videogames);
 router.use("/videogame", videogame);
