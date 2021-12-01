@@ -74,8 +74,6 @@ export default function CreateVideoGame() {
         })
     }
 
-
-
     useEffect(() => {
         dispatch(getGenres());
     }, []);
@@ -91,61 +89,66 @@ export default function CreateVideoGame() {
                 <div className={styles.label1}>
                     <label className={styles.label1}>Nombre:</label>
                     <input
+                    className={errors.name && styles.errors}
                     type="text"
                     value={input.name}
                     name="name"
                     onChange={(e) => handleChange(e)}
                     />
                     {errors.name && (
-                        <p>{errors.name}</p>
+                        <p className={styles.errors}>{errors.name}</p>
                     )}   
                 </div>
                 <div>
                     <label>Descripción:</label>
                     <input
+                    className={errors.description && styles.errors}
                     type="text"
                     value={input.description}
                     name="description"
                     onChange={(e) => handleChange(e)}
                     />   
                     {errors.description && (
-                        <p>{errors.description}</p>
+                        <p className={styles.errors}>{errors.description}</p>
                     )}  
                 </div>
                 <div>
                     <label>Fecha de lanzamiento:</label>
                     <input
+                    className={errors.released && styles.errors}
                     type="text"
                     value={input.released}
                     name="released"
                     onChange={(e) => handleChange(e)}
                     />   
                     {errors.released && (
-                        <p>{errors.released}</p>
+                        <p className={styles.errors}>{errors.released}</p>
                     )}
                 </div>
                 <div>
                     <label>Rating:</label>
                     <input
+                    className={errors.rating && styles.errors}
                     type="text"
                     value={input.rating}
                     name="rating"
                     onChange={(e) => handleChange(e)}
                     />   
                     {errors.rating && (
-                        <p>{errors.rating}</p>
+                        <p className={styles.errors}>{errors.rating}</p>
                     )}
                 </div>
                 <div>
                     <label>Plataformas:</label>
                     <input
+                    className={errors.platforms && styles.errors}
                     type="text"
                     value={input.platforms}
                     name="platforms"
                     onChange={(e) => handleChange(e)}
                     />
                     {errors.platforms && (
-                        <p>{errors.platforms}</p>
+                        <p className={styles.errors}>{errors.platforms}</p>
                     )}
                 </div>
                 <div>
@@ -154,7 +157,7 @@ export default function CreateVideoGame() {
                     return <option value={gen.id}>{gen.name}</option>
                     })}   
                 </select>
-                <ul><p>{input.genres.map(el => el.name + ", ")}</p></ul>
+                <ul><p className={styles.p}>{input.genres.map(el => el.name + ", ")}</p></ul>
                 </div>
                 <div className={styles.botonn}>
                 <button className={styles.botonn} type="submit" disabled={

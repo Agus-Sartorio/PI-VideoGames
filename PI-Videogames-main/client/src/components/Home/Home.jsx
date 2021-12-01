@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import Card from "../Card/Card"
 import Paginado from '../Paginado/Paginado';
 import SearchBar from '../SearchBar/SearchBar';
-import mando2 from "../../fondos/mando2.png"
+import mario from "../../fondos/mario.gif";
 import styles from "./Home.module.css";
 
 export default function Home() {
@@ -65,11 +65,11 @@ export default function Home() {
             {
                 !allVideogames.length && !allVideogamesCopy.length &&
                 <div className={styles.padre}>
-                <img src={mando2} alt="" className={styles.loader} />
+                <img src={mario} alt="" className={styles.cargador} />
                 </div>
             }
             {allVideogames.length > 0 && 
-            <Link to = "./videogame" className={styles.link}>Create videogame</Link>}
+            <Link to = "./videogame" className={styles.link}><button className={styles.crear}>Crear videojuego</button></Link>}
             {
                     !allVideogames.length && allVideogamesCopy.length > 0 && 
                     <div className={styles.error}>
@@ -122,6 +122,8 @@ export default function Home() {
                         return <Card name={v.name}  genres={v.genres} id={v.id} image={v.image} key={v.id} />
                     })
                 }
+                
+                </div>  
                 { 
                  allVideogames.length > 15 && <Paginado 
                 videogamesPerPage = {videogamesPerPage}
@@ -129,7 +131,6 @@ export default function Home() {
                 paginado = {paginado}
                 />
                 }    
-                </div>  
         </div>
     )
 

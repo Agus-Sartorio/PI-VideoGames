@@ -1,5 +1,5 @@
 .todo{
-    background-image: url(../../fondos/pexels-cottonbro-4835429.jpg);
+    background-image: url(../../fondos/ps1.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -11,10 +11,11 @@
 
 .imgError{
     display: flex;
-    /* margin-left: 600px; */
+    border-radius: 5px;
     height:350px;
     width:350px;
     margin-left: 590px;
+    opacity: 0.8;
 }
 
 .h2error{

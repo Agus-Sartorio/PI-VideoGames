@@ -15,7 +15,7 @@ router.post("/", async (req, res) => {
         released,
         rating,
         platforms,
-        image: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Youtube_loading_symbol_1_(wobbly).gif'
+        image: 'https://media0.giphy.com/media/11FuEnXyGsXFba/giphy.gif?cid=ecf05e47js88ohxfm8o0sgevh1g6e951ffhv6npyl07huekd&rid=giphy.gif&ct=g'
       });
       videogame.setGenres(genresIds); 
       return res.json(videogame);

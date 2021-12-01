@@ -1,5 +1,5 @@
 .cont{
-    background-image: url(../../fondos/pexels-cottonbro-4835429.jpg);
+    background-image: url(../../fondos/mando3.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -11,15 +11,14 @@
 
 .all{
     margin-top:100px;
-    background: #ADA996;
-    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
-    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    background: black;
     margin-left: 400px;
     margin-right: 400px;
     border-radius:8px;
     margin-bottom: 150px;
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    opacity:0.8;
 }
 
 .volver{
@@ -57,15 +56,10 @@
     text-decoration: none;
 }
 
-/* .tittle{
-    text-align: center;
+.tittle{
+    color:white;
 }
 
-.div{
-    text-align: center;
-    display:flex;
-    height:5vh;
-} */
 
 .form{
     display:flex;
@@ -76,10 +70,8 @@
     margin-left: 20px;
 }
 
-.botton{
-    display:flex;
-    flex-direction:column;
-    margin-top: 15px;
+.form label{
+    color:white;
 }
 
 .form label{
@@ -87,4 +79,21 @@
     display: inline-block;
     text-align: left;
     margin-right:15px
+}
+
+.botonn{
+    margin-bottom: 10px;
+}
+
+.p{
+    color: white;
+}
+
+.errors{
+    color:red;
+}
+
+input.errors{
+    border: 3px solid red;
+    border-radius: 1.5px;
 }

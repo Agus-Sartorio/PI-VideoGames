@@ -1,9 +1,16 @@
 .todo{
-    /* background: white; */
-    background: #C9D6FF;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* background: #C9D6FF;
+    background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF); 
+    background: linear-gradient(to right, #E2E2E2, #C9D6FF);  */
+    background-image: url(../../fondos/ps1.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-bottom: 60px;
     display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
     flex-direction:column;
     min-height: 100vh;
 }
@@ -15,14 +22,12 @@ background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, F
 }
 
 .text{
-    display:flex;
-    margin-left: 60px;
-    margin-right: 60px;
-    margin-bottom: 0px;
     text-align: justify;
+    margin: 0 auto;
     max-width: 950px;
-    margin-left: 280px; 
+    width:fit-content;
     font-family: 'Roboto', sans-serif;
+    color:white
 }
 
 .btn{
@@ -48,32 +53,38 @@ background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, F
 
 .button{
     margin-bottom:50px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .h4{
     font-family: 'Roboto', sans-serif;
+    color:white;
 }
 
 .plataformas{
     font-family: 'Roboto', sans-serif;
+    color:white;
 }
 
 .rating{
     font-family: 'Roboto', sans-serif;
+    color:white;
 }
 
 .lanzamiento{
     font-family: 'Roboto', sans-serif;
+    color:white;
 }
 
 .h1{
     font-family: 'Roboto', sans-serif;
+    color:white;
 }
 
 .loader{
     /* align-self: center; */
     animation: running 3s infinite linear;
+    width: 80px;
 }
 
 @keyframes running {
@@ -86,5 +97,56 @@ background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, F
 }
 
 .padre{
-    margin-top:120px;
+    margin-top:10px;
+}
+
+.cont{
+    background-color:black;
+    margin-top:100px;
+    margin-bottom:80px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius:25px;
+    opacity: 0.9;
+    padding:10px;
+}
+
+.h5{
+    color:white;
+}
+
+.back{
+    background: none;
+    text-decoration: none;
+    display: flex;
+    /* width: 115px; */
+    margin-left: 60px;
+    color: white;
+    border-style: none;
+    font-size: 30px;
+    margin-top:15px;
+    margin-bottom:15px;
+    font-weight: bold;
+    font-family: Verdana;
+}
+
+.back:hover{
+    background: none;
+    text-decoration: none;
+    display: flex;
+    /* width: 115px; */
+    margin-left: 60px;
+    color: white;
+    border-style: none;
+    font-size: 30px;
+    margin-top:15px;
+    margin-bottom:15px;
+    font-weight: bold;
+    font-family: Verdana;
+    cursor: pointer;
+}
+
+.retornar{
+    text-decoration: none;
+    margin-top:15px;    
 }
