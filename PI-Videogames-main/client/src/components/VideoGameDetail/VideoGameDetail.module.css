@@ -1,7 +1,4 @@
 .todo{
-    /* background: #C9D6FF;
-    background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF); 
-    background: linear-gradient(to right, #E2E2E2, #C9D6FF);  */
     background-image: url(../../fondos/ps1.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -82,7 +79,6 @@
 }
 
 .loader{
-    /* align-self: center; */
     animation: running 3s infinite linear;
     width: 80px;
 }
@@ -113,13 +109,13 @@
 
 .h5{
     color:white;
+    font-weight:bold;
 }
 
 .back{
     background: none;
     text-decoration: none;
     display: flex;
-    /* width: 115px; */
     margin-left: 60px;
     color: white;
     border-style: none;
@@ -134,7 +130,6 @@
     background: none;
     text-decoration: none;
     display: flex;
-    /* width: 115px; */
     margin-left: 60px;
     color: white;
     border-style: none;

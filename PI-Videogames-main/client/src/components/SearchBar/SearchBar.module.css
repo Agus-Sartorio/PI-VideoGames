@@ -8,8 +8,6 @@
 }
 
 .buscar{
-    /* position: absolute; */
-    /* padding:5px; */
     display: flex;
     margin-left: 65px;
     background-color:white;
@@ -18,8 +16,6 @@
 }
 
 .buscar input{
-    /* width:240px;
-    height:25px; */
     padding:10px 20px;
     font-size:14px;
     color:#000;

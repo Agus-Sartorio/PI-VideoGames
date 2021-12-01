@@ -13,30 +13,20 @@
 }
 
 .a{
-    border: 1px solid #ddd;
+    border: 1px solid black;
     padding: 4px 10px;
-    border-radius:5px;
-    color:white;
-    background: #000000;  
-    background: -webkit-linear-gradient(to right, #434343, #000000);
-    background: linear-gradient(to right, #434343, #000000);
-
+    border-radius:4px;
+    color:black;
+    background: rgba(51, 51, 51, 0.747);
+    font-weight: bold;
 }
 
 .a:hover{
-    border: 2px solid rgb(7, 7, 7);
+    border: 1px solid black;
     font-weight: bold;
     padding: 4px 10px;
-    border-radius:5px;
+    border-radius:4px;
     color:black;
-    background: #ECE9E6; 
-    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  
-    background: linear-gradient(to right, #FFFFFF, #ECE9E6); 
+    background: white; 
     cursor: pointer;
 }
-
-/* .a:hover{
-    border: 1.5px solid #ddd;
-    padding: 4px 10px;
-    cursor: pointer;
-} */

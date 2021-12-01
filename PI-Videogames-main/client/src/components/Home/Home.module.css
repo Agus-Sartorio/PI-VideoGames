@@ -3,9 +3,6 @@
     flex-direction:row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    /* background: black; */
-    /* background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
-    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); */
     margin-left: 60px;
     margin-right: 60px;
     border-radius:8px;
@@ -42,12 +39,6 @@
     font-family: "arial", serif;
     cursor: pointer;
 }
-
-/* .h1{
-    color: white;
-    display: flex;
-    margin-left: 60px;
-} */
 
 .filtros{
     margin-bottom: 15px;
